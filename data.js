@@ -17,9 +17,9 @@ var TEAMS = [
 ];
 
 var SPONSORS = [
-  {name: "Biryani House",    logo: "img/sponsor-biryani-house.png"},
-  {name: "MOTW Coffee",      logo: "img/sponsor-motw-coffee.png"},
-  {name: "Epic Hot Chicken", logo: "img/sponsor-epic-hot-chicken.png"}
+  {name: "Biryani House",    logo: "sponsor-biryani-house.png"},
+  {name: "MOTW Coffee",      logo: "sponsor-motw-coffee.png"},
+  {name: "Epic Hot Chicken", logo: "sponsor-epic-hot-chicken.png"}
 ];
 
 var ROUNDS = [
