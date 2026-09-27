@@ -50,7 +50,6 @@ h1,h2,h3,h4{margin:0;text-wrap:balance}
 .brand p{margin:6px 0 0;color:var(--lime-text);font-weight:700;font-size:clamp(15px,2.6vw,22px);letter-spacing:.04em}
 .stats{position:relative;display:flex;flex-wrap:wrap;align-items:center;gap:6px 16px;margin-top:24px;color:var(--on-green-2)}
 .stats b{font-weight:600;opacity:.7}
-.stamp{position:relative;margin:6px 0 0;font-size:12px;color:var(--on-green-2)}
 
 /* ---------- menu ---------- */
 .nav{position:sticky;top:0;z-index:20;background:rgba(14,58,32,.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--glass-line)}

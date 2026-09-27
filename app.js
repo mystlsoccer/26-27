@@ -80,7 +80,6 @@ el("stats").innerHTML =
   '<span>IFGSTL Gym</span><b aria-hidden="true">·</b>' +
   '<span>' + matchesPlayed + ' matches</span><b aria-hidden="true">·</b>' +
   '<span>' + totalGoals + ' goals</span>';
-el("stamp").textContent = "Updated " + UPDATED;
 
 // league table
 el("tableSub").textContent = "Round " + last.round + " standings";

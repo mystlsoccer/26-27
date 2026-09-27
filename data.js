@@ -1,14 +1,11 @@
 /* MYSTL League 26-27 — league data.
    This is the only file you need to edit after each matchday:
-   1. Change UPDATED to today's date.
-   2. In that round, add each match's goals, one entry per scorer:
+   1. In that round, add each match's goals, one entry per scorer:
         ["Team", "Player", [minute, minute]]   e.g. ["Haramball", "Aarizz Mohammed", [4, 13, 14]]
       If goal times weren't recorded, put the number of goals instead of minutes:
         ["Chevapi FC", "Adam Altrakrouri", 5]
-   3. Set played: true on the round.
+   2. Set played: true on the round.
    The table, top scorers, season numbers and next matchday all update themselves. */
-
-var UPDATED = "27 September 2026";
 
 // Team names here must match the names used in ROUNDS exactly.
 var TEAMS = [
