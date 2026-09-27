@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MYSTL League 26–27</title>
+<meta name="description" content="Scores, league table, top scorers and fixtures for the MYSTL soccer league, 2026-27 season.">
+<meta property="og:title" content="MYSTL League 26–27">
+<meta property="og:description" content="Scores, league table, top scorers and fixtures for the MYSTL soccer league, 2026-27 season.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#FF5C68">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%E2%9A%BD</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400;62..125,500;62..125,600;62..125,700;62..125,800;62..125,900&family=Azeret+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="mast">
+  <div class="wrap">
+    <div class="mast-top">
+      <span class="league">MYSTL Soccer League</span>
+      <span class="stamp" id="stamp"></span>
+    </div>
+    <h1 class="wordmark">MYSTL League<span>Season 2026–27 · IFGSTL Gym</span></h1>
+    <div class="facts" id="facts"></div>
+  </div>
+</header>
+
+<nav class="nav" aria-label="Sections">
+  <div class="wrap">
+    <a href="#latest">Latest scores</a>
+    <a href="#table">Table</a>
+    <a href="#scorers">Top scorers</a>
+    <a href="#next">Next matchday</a>
+    <a href="#results">Results</a>
+    <a href="#fixtures">Fixtures</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <section id="latest">
+    <div class="sec-hd"><h2 id="latestTitle">Latest scores</h2><p id="latestSub"></p></div>
+    <div class="scores" id="scores"></div>
+  </section>
+
+  <div class="duo" style="margin-top:30px">
+    <section id="table">
+      <div class="sec-hd"><h2>League table</h2><p id="tableSub"></p></div>
+      <div class="card">
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th class="l" colspan="2">Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th><th class="l">Form</th></tr></thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+        <p class="key">3 points for a win, 1 for a draw. Teams level on points are split by goal difference, then goals scored.</p>
+      </div>
+    </section>
+
+    <section id="scorers">
+      <div class="sec-hd"><h2>Golden Boot</h2><p id="bootSub"></p></div>
+      <div class="card">
+        <ol class="boot" id="boot"></ol>
+        <details class="more" id="bootMore"><summary id="bootMoreLabel"></summary><p id="bootRest"></p></details>
+      </div>
+    </section>
+  </div>
+
+  <section id="next">
+    <div class="sec-hd"><h2>Next matchday</h2><p>IFGSTL Gym</p></div>
+    <div class="card next" id="nextCard"></div>
+  </section>
+
+  <section id="results">
+    <div class="sec-hd"><h2>Results</h2><p>Newest first</p></div>
+    <div id="rounds"></div>
+  </section>
+
+  <section id="fixtures">
+    <div class="sec-hd"><h2>Fixtures</h2><p id="fixturesSub"></p></div>
+    <div class="card later" id="later"></div>
+    <p class="foot-note">Double round-robin: every team plays every other team twice across 14 rounds. Later rounds will be added here as they're confirmed.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="motto">Fair play · Punctuality · Brotherhood</div>
+    <p id="footStamp"></p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
