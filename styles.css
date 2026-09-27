@@ -1,31 +1,19 @@
+/* One look on every device: the dark scoreboard ground with the tracker's pink.
+   It deliberately ignores the phone's light/dark setting. */
 :root{
-  --ground:#FAF6F4; --surface:#FFFFFF; --surface-2:#F4ECEA; --line:#E7DAD8;
-  --ink:#1B1012; --ink-2:#6A575A; --ink-3:#9A878A;
-  --accent:#FF5C68; --accent-deep:#E8475A; --accent-soft:#FFE6E9; --on-accent:#2A0710;
+  color-scheme:dark;
+  --ground:#120A0C; --surface:#1B1113; --surface-2:#25181B; --line:#3A2A2D;
+  --ink:#F7EEED; --ink-2:#BCA8AB; --ink-3:#8C787B;
+  --accent:#FF5C68; --accent-deep:#FF9BA1; --accent-soft:#3A171B; --on-accent:#1B0A0C;
   /* the tracker's pink, with white text like the tracker's header */
   --pink-band:linear-gradient(165deg,#FF9BA1 0%,#FF7883 48%,#FF5C68 100%);
   --mast-ink:#FFFFFF; --mast-quiet:rgba(255,255,255,.92); --mast-rule:rgba(255,255,255,.4);
   --mast-shadow:0 1px 2px rgba(122,16,34,.35);
-  --win:#1B7A4E; --win-soft:#E2F2E9; --draw:#946309; --draw-soft:#F7EDD9; --loss:#B02A39; --loss-soft:#FAE3E5;
-  --shadow:0 1px 2px rgba(27,16,18,.05), 0 14px 30px -20px rgba(27,16,18,.4);
-  --r:14px;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --ground:#120A0C; --surface:#1B1113; --surface-2:#25181B; --line:#3A2A2D;
-    --ink:#F7EEED; --ink-2:#BCA8AB; --ink-3:#8C787B;
-    --accent:#FF5C68; --accent-deep:#FF9BA1; --accent-soft:#3A171B; --on-accent:#1B0A0C;
-    --win:#5CCB91; --win-soft:#12291E; --draw:#E3A94A; --draw-soft:#2E2111; --loss:#FF7C86; --loss-soft:#35151A;
-    --shadow:0 1px 2px rgba(0,0,0,.45), 0 14px 30px -20px rgba(0,0,0,.9);
-  }
-}
-:root[data-theme="dark"]{
-  --ground:#120A0C; --surface:#1B1113; --surface-2:#25181B; --line:#3A2A2D;
-  --ink:#F7EEED; --ink-2:#BCA8AB; --ink-3:#8C787B;
-  --accent:#FF5C68; --accent-deep:#FF9BA1; --accent-soft:#3A171B; --on-accent:#1B0A0C;
   --win:#5CCB91; --win-soft:#12291E; --draw:#E3A94A; --draw-soft:#2E2111; --loss:#FF7C86; --loss-soft:#35151A;
   --shadow:0 1px 2px rgba(0,0,0,.45), 0 14px 30px -20px rgba(0,0,0,.9);
+  --r:14px;
 }
+html{background:var(--ground)}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
