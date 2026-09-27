@@ -3,96 +3,102 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MYSTL League 26–27</title>
-<meta name="description" content="Scores, league table, top scorers and fixtures for the MYSTL soccer league, 2026-27 season.">
-<meta property="og:title" content="MYSTL League 26–27">
-<meta property="og:description" content="Scores, league table, top scorers and fixtures for the MYSTL soccer league, 2026-27 season.">
+<title>MYSTL Soccer League 26–27</title>
+<meta name="description" content="Scores, league table, top scorers and fixtures for the MYSTL soccer league, 2026–27 season.">
+<meta property="og:title" content="MYSTL Soccer League 26–27">
+<meta property="og:description" content="Scores, league table, top scorers and fixtures for the MYSTL soccer league, 2026–27 season.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#FF5C68">
-<meta name="color-scheme" content="dark">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%E2%9A%BD</text></svg>">
+<meta property="og:image" content="img/logo.png">
+<meta name="theme-color" content="#0E3A20">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400;62..125,500;62..125,600;62..125,700;62..125,800;62..125,900&family=Azeret+Mono:wght@500;700&display=swap">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
 <header class="mast">
+  <span class="dot a" aria-hidden="true"></span><span class="dot b" aria-hidden="true"></span>
   <div class="wrap">
-    <div class="mast-top">
-      <span class="league">MYSTL Soccer League</span>
-      <span class="stamp" id="stamp"></span>
+    <div class="brand">
+      <img src="img/logo.png" alt="MYSTL Soccer League crest" width="108" height="108">
+      <div>
+        <h1>MYSTL Soccer League</h1>
+        <p>Season 2026–27</p>
+      </div>
     </div>
-    <h1 class="wordmark">MYSTL League<span>Season 2026–27 · IFGSTL Gym</span></h1>
-    <div class="facts" id="facts"></div>
+    <div class="stats caps" id="stats"></div>
+    <p class="stamp" id="stamp"></p>
   </div>
 </header>
 
 <nav class="nav" aria-label="Sections">
   <div class="wrap">
-    <a href="#latest">Latest scores</a>
     <a href="#table">Table</a>
-    <a href="#scorers">Top scorers</a>
-    <a href="#next">Next matchday</a>
+    <a href="#scorers">Scorers</a>
     <a href="#results">Results</a>
+    <a href="#next">Next up</a>
     <a href="#fixtures">Fixtures</a>
+    <a href="#sponsors">Sponsors</a>
   </div>
 </nav>
 
 <main class="wrap">
-  <section id="latest">
-    <div class="sec-hd"><h2 id="latestTitle">Latest scores</h2><p id="latestSub"></p></div>
-    <div class="scores" id="scores"></div>
+  <section id="table">
+    <div class="title"><h2>League Table</h2><p id="tableSub"></p></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th class="l">Pos</th><th class="l">Club</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th></tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <p class="key">3 points for a win, 1 for a draw. Teams level on points are split by goal difference, then goals scored.</p>
   </section>
 
-  <div class="duo" style="margin-top:30px">
-    <section id="table">
-      <div class="sec-hd"><h2>League table</h2><p id="tableSub"></p></div>
-      <div class="card">
-        <div class="tbl-wrap">
-          <table>
-            <thead><tr><th class="l" colspan="2">Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th><th class="l">Form</th></tr></thead>
-            <tbody id="tbody"></tbody>
-          </table>
-        </div>
-        <p class="key">3 points for a win, 1 for a draw. Teams level on points are split by goal difference, then goals scored.</p>
-      </div>
-    </section>
-
-    <section id="scorers">
-      <div class="sec-hd"><h2>Golden Boot</h2><p id="bootSub"></p></div>
-      <div class="card">
-        <ol class="boot" id="boot"></ol>
-        <details class="more" id="bootMore"><summary id="bootMoreLabel"></summary><p id="bootRest"></p></details>
-      </div>
-    </section>
-  </div>
-
-  <section id="next">
-    <div class="sec-hd"><h2>Next matchday</h2><p>IFGSTL Gym</p></div>
-    <div class="card next" id="nextCard"></div>
+  <section id="scorers">
+    <div class="label"><h2>Top Goalscorers</h2></div>
+    <ol class="boot" id="boot"></ol>
+    <details class="more" id="bootMore"><summary id="bootMoreLabel"></summary><p id="bootRest"></p></details>
   </section>
 
   <section id="results">
-    <div class="sec-hd"><h2>Results</h2><p>Newest first</p></div>
-    <div id="rounds"></div>
+    <div class="title"><h2 id="latestTitle">Results</h2><p id="latestSub"></p></div>
+    <div class="matches" id="latest"></div>
+  </section>
+
+  <section id="next">
+    <div class="title"><h2>Next Matchday</h2><p id="nextSub"></p></div>
+    <div class="fx-groups" id="nextBody"></div>
   </section>
 
   <section id="fixtures">
-    <div class="sec-hd"><h2>Fixtures</h2><p id="fixturesSub"></p></div>
-    <div class="card later" id="later"></div>
-    <p class="foot-note">Double round-robin: every team plays every other team twice across 14 rounds. Later rounds will be added here as they're confirmed.</p>
+    <div class="label"><h2>Upcoming Fixtures</h2></div>
+    <div class="fx-groups" id="laterBody"></div>
+    <p class="key">Double round-robin: every team plays every other team twice across 14 rounds. Later rounds are added as they're confirmed.</p>
+  </section>
+
+  <section id="earlierSection">
+    <div class="label"><h2>Earlier Results</h2></div>
+    <div id="earlier"></div>
   </section>
 </main>
 
+<section class="sponsors" id="sponsors">
+  <div class="wrap">
+    <h2>Our Sponsors</h2>
+    <ul class="sponsor-list" id="sponsorList"></ul>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
-    <div class="motto">Fair play · Punctuality · Brotherhood</div>
-    <p id="footStamp"></p>
+    <div class="motto">MYSTL Soccer League · Fair Play · Brotherhood</div>
+    <p>IFGSTL Gym</p>
   </div>
 </footer>
 
 <script src="data.js"></script>
-<script src="app.js"></script>
+<script src="app.js?v=8"></script>
 </body>
 </html>

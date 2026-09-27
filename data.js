@@ -1,38 +1,41 @@
 /* MYSTL League 26-27 — league data.
    This is the only file you need to edit after each matchday:
    1. Change UPDATED to today's date.
-   2. In that round, add each match's goals as ["Team", "Player", number of goals].
+   2. In that round, add each match's goals, one entry per scorer:
+        ["Team", "Player", [minute, minute]]   e.g. ["Haramball", "Aarizz Mohammed", [4, 13, 14]]
+      If goal times weren't recorded, put the number of goals instead of minutes:
+        ["Chevapi FC", "Adam Altrakrouri", 5]
    3. Set played: true on the round.
-   The table, Golden Boot, season numbers and next matchday all update themselves. */
+   The table, top scorers, season numbers and next matchday all update themselves. */
 
 var UPDATED = "27 September 2026";
 
-var TEAMS = {
-  "Chevapi FC":         {code:"CHV", hue:268},
-  "Haramball":          {code:"HRB", hue:4},
-  "Caballo Court FC":   {code:"CAB", hue:152},
-  "Brazilian Pharaohs": {code:"BPH", hue:45},
-  "Outcast FC":         {code:"OUT", hue:212},
-  "Ilyes FC":           {code:"ILY", hue:352},
-  "Taim FC":            {code:"TAI", hue:190},
-  "Golden Dawn":        {code:"GLD", hue:30}
-};
+// Team names here must match the names used in ROUNDS exactly.
+var TEAMS = [
+  "Chevapi FC", "Haramball", "Caballo Court FC", "Brazilian Pharaohs",
+  "Outcast FC", "Ilyes FC", "Taim FC", "Golden Dawn"
+];
 
-// goals: [scoring team, player, count]
+var SPONSORS = [
+  {name: "Biryani House",    logo: "img/sponsor-biryani-house.png"},
+  {name: "MOTW Coffee",      logo: "img/sponsor-motw-coffee.png"},
+  {name: "Epic Hot Chicken", logo: "img/sponsor-epic-hot-chicken.png"}
+];
+
 var ROUNDS = [
   {round:1, day:"Saturday 12 September", played:true, note:"Opening game",
    halaqa:"Halaqa: “Beyond the Scoreboard: Islam & Sportsmanship” with Mufti Asif Umar",
    matches:[
     {home:"Ilyes FC", away:"Outcast FC", goals:[["Ilyes FC","Zayd Khan",2],["Outcast FC","Fakhir Haque",2]]},
     {home:"Brazilian Pharaohs", away:"Caballo Court FC", goals:[["Brazilian Pharaohs","Ahmed Elbealy",1],["Caballo Court FC","Behzad Sedeiqi",1],["Caballo Court FC","Khalaf Alrashid",1]]},
-    {home:"Golden Dawn", away:"Chevapi FC", goals:[["Chevapi FC","Adam",5],["Chevapi FC","Farooq",1]]},
+    {home:"Golden Dawn", away:"Chevapi FC", goals:[["Chevapi FC","Adam Altrakrouri",5],["Chevapi FC","Farooq",1]]},
     {home:"Haramball", away:"Taim FC", goals:[["Haramball","Aarizz Mohammed",2],["Taim FC","Om Uppara",1]]}
   ]},
   {round:2, day:"Saturday 26 September", played:true, matches:[
-    {home:"Ilyes FC", away:"Caballo Court FC", goals:[["Caballo Court FC","Behzad Sedeiqi",1]]},
-    {home:"Outcast FC", away:"Chevapi FC", goals:[["Outcast FC","Fakhir Haque",1],["Outcast FC","Fuzail Pasha",1],["Chevapi FC","Adam",2],["Chevapi FC","Ismail",1]]},
-    {home:"Brazilian Pharaohs", away:"Taim FC", goals:[["Brazilian Pharaohs","Omar Elbealy",1],["Brazilian Pharaohs","Hamza Ahmad",2],["Taim FC","Ibrahim Taher",2]]},
-    {home:"Golden Dawn", away:"Haramball", goals:[["Golden Dawn","Ali Shahab",1],["Haramball","Aarizz Mohammed",3],["Haramball","Saad Salahudiin",1],["Haramball","Ameer Darbadwan",1]]}
+    {home:"Ilyes FC", away:"Caballo Court FC", goals:[["Caballo Court FC","Behzad Sedeiqi",[12]]]},
+    {home:"Outcast FC", away:"Chevapi FC", goals:[["Outcast FC","Fakhir Haque",[8]],["Outcast FC","Fuzail Pasha",[10]],["Chevapi FC","Ismail",[8]],["Chevapi FC","Adam Altrakrouri",[12,12]]]},
+    {home:"Brazilian Pharaohs", away:"Taim FC", goals:[["Brazilian Pharaohs","Omar Elbealy",[2]],["Brazilian Pharaohs","Hamza Ahmad",[5,6]],["Taim FC","Ibrahim Taher",[3,6]]]},
+    {home:"Golden Dawn", away:"Haramball", goals:[["Golden Dawn","Ali Shahab",[6]],["Haramball","Aarizz Mohammed",[4,13,14]],["Haramball","Saad Salahudiin",[13]],["Haramball","Ameer Darbadwan",[14]]]}
   ]},
   {round:3, day:"Saturday 3 October", note:"Doubleheader", matches:[
     {home:"Ilyes FC", away:"Chevapi FC"},
