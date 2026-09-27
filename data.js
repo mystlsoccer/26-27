@@ -54,11 +54,6 @@ var ROUNDS = [
     {home:"Taim FC", away:"Golden Dawn"},
     {home:"Chevapi FC", away:"Brazilian Pharaohs"},
     {home:"Caballo Court FC", away:"Outcast FC"}
-  ]},
-  {round:6, day:"Sunday 18 October", matches:[
-    {home:"Ilyes FC", away:"Golden Dawn"},
-    {home:"Haramball", away:"Brazilian Pharaohs"},
-    {home:"Taim FC", away:"Outcast FC"},
-    {home:"Chevapi FC", away:"Caballo Court FC"}
   ]}
+  // Round 6 (Sunday 18 October) left off until its date is confirmed.
 ];
