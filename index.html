@@ -98,7 +98,19 @@
   </div>
 </footer>
 
-<script src="data.js"></script>
-<script src="app.js?v=8"></script>
+<script>
+/* data.js holds the scores and changes every week, so always fetch a fresh copy
+   (otherwise phones can show last week's results for up to 10 minutes).
+   app.js only changes with the design, so it keeps a version number instead. */
+(function(){
+  function load(src, next){
+    var s = document.createElement("script");
+    s.src = src;
+    if(next) s.onload = next;
+    document.body.appendChild(s);
+  }
+  load("data.js?t=" + Date.now(), function(){ load("app.js?v=9"); });
+})();
+</script>
 </body>
 </html>
