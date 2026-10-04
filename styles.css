@@ -188,3 +188,37 @@ footer p{margin:8px 0 0;font-size:12px;color:var(--on-green-2)}
   .sponsor-list{gap:22px}
   .sponsor-list img{height:72px}
 }
+
+/* ---------- squads ---------- */
+.squads{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.squad{background:var(--card);color:var(--ink);border-radius:18px;padding:16px 18px 18px}
+.squad h3{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:17px;font-weight:800;letter-spacing:-.01em;padding-bottom:10px;border-bottom:1px solid #E3EDE6}
+.squad h3 span{flex:none;background:var(--lime);color:var(--ink);border-radius:999px;font-size:12px;font-weight:700;padding:2px 10px}
+.squad ol{margin:10px 0 0;padding:0;list-style:none;counter-reset:p}
+.squad li{counter-increment:p;display:flex;gap:10px;align-items:baseline;padding:4px 0;font-size:14.5px;font-weight:600}
+.squad li::before{content:counter(p);flex:none;width:16px;color:var(--ink-3);font-size:12px;font-weight:700}
+
+/* ---------- rules: handbook style — label and value on one line ---------- */
+.rules{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+.rulecard{background:var(--card);color:var(--ink);border-radius:18px;padding:16px 20px 18px}
+.rulecard h3{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--green);padding-bottom:10px;border-bottom:1px solid #E3EDE6}
+.rulecard dl{margin:12px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px 28px}
+.rulecard div{display:block;font-size:14px;line-height:1.45}
+.rulecard dt{display:inline;font-weight:800}
+.rulecard dt::after{content:":"}
+.rulecard dd{display:inline;margin:0 0 0 5px;font-weight:500;color:var(--ink-2)}
+.rulecard.wide dl{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(min-width:880px){
+  .rules{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rulecard.wide{grid-column:1 / -1}
+}
+
+@media (max-width:640px){
+  .squads,.rules{grid-template-columns:minmax(0,1fr)}
+  .squad,.rulecard{padding:14px 16px 16px}
+  .rulecard dl,.rulecard.wide dl{grid-template-columns:minmax(0,1fr);gap:6px}
+  .rulecard div{font-size:13.5px}
+}
+
+/* a forfeited game: 3-0 awarded, nobody scored */
+.forfeit{margin:14px 0 0;padding-top:12px;border-top:1px dashed #D7E4DB;font-size:13px;font-weight:600;color:var(--ink-3);text-align:center}

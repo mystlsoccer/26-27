@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap">
-<link rel="stylesheet" href="styles.css?v=9">
+<link rel="stylesheet" href="styles.css?v=12">
 </head>
 <body>
 <header class="mast">
@@ -39,6 +39,8 @@
     <a href="#results">Results</a>
     <a href="#next">Next up</a>
     <a href="#fixtures">Fixtures</a>
+    <a href="#squads">Squads</a>
+    <a href="#rulebook">Rules</a>
     <a href="#sponsors">Sponsors</a>
   </div>
 </nav>
@@ -52,7 +54,7 @@
         <tbody id="tbody"></tbody>
       </table>
     </div>
-    <p class="key">3 points for a win, 1 for a draw. Teams level on points are split by goal difference, then goals scored.</p>
+    <p class="key">Win 3 &middot; Draw 1 &middot; Loss 0. Teams level on points are split by goal difference, then head to head, then goals against.</p>
   </section>
 
   <section id="scorers">
@@ -75,6 +77,16 @@
     <div class="label"><h2>Upcoming Fixtures</h2></div>
     <div class="fx-groups" id="laterBody"></div>
     <p class="key">Double round-robin: every team plays every other team twice across 14 rounds. Later rounds are added as they're confirmed.</p>
+  </section>
+
+  <section id="squads">
+    <div class="label"><h2>Squads</h2></div>
+    <div class="squads" id="rosters"></div>
+  </section>
+
+  <section id="rulebook">
+    <div class="label"><h2>Official Rules</h2><span>From the league handbook</span></div>
+    <div class="rules" id="rules"></div>
   </section>
 
   <section id="earlierSection">
@@ -108,7 +120,7 @@
     if(next) s.onload = next;
     document.body.appendChild(s);
   }
-  load("data.js?t=" + Date.now(), function(){ load("app.js?v=10"); });
+  load("data.js?t=" + Date.now(), function(){ load("app.js?v=15"); });
 })();
 </script>
 </body>
