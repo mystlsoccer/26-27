@@ -61,6 +61,10 @@ var ROUNDS = [
    Everyone else is alphabetical. */
 var SCORER_PRIORITY = ["Malik Helwani"];
 
+/* Players listed here get their own position number instead of sharing it
+   with the player above on the same goals (e.g. 2nd and 3rd, not 2nd and 2nd). */
+var SCORER_OWN_RANK = ["Adam Altrakrouri"];
+
 /* Squads — names only. Add a player by adding their name to the list. */
 var ROSTERS = [
   {team:"Outcast FC", players:["Mohammed Rayhaan","Fuzail Pasha","Daris Halilic","Fakhir Haque","Fahim Salam","Shaharyar Fareed"]},

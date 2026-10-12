@@ -135,8 +135,9 @@ el("tbody").innerHTML = tbl.map(function(r, i){
 var shown = sc.filter(function(s){ return s.goals >= 2; });
 var rest = sc.filter(function(s){ return s.goals < 2; });
 var rank = 0, prev = null;
+var ownRank = typeof SCORER_OWN_RANK !== "undefined" ? SCORER_OWN_RANK : [];
 el("boot").innerHTML = shown.map(function(s, i){
-  if(s.goals !== prev){ rank = i + 1; prev = s.goals; }
+  if(s.goals !== prev || ownRank.indexOf(s.player) !== -1){ rank = i + 1; prev = s.goals; }
   return '<li><span class="rk">' + rank + '</span><span class="who">' + esc(s.player) + '</span>' +
     '<span class="club">' + esc(s.team) + '</span><span class="pill lime">' + s.goals + (s.goals === 1 ? " goal" : " goals") + '</span></li>';
 }).join("");
