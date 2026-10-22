@@ -54,6 +54,18 @@ var ROUNDS = [
     {home:"Taim FC", away:"Golden Dawn", goals:[["Taim FC","Ikhana Hildebolt",[5]],["Taim FC","Hamzah Alhamad",[12]],["Taim FC","Om Uppara",[12]],["Golden Dawn","Ali Shahab",[13]],["Taim FC","Ibrahim Taher",[14]]]},
     {home:"Chevapi FC", away:"Brazilian Pharaohs", goals:[["Chevapi FC","Mujahed",[1]],["Brazilian Pharaohs","Hamza Ahmad",[2,6,14]],["Chevapi FC","Ismail",[5]],["Chevapi FC","Farooq",[13]]]},
     {home:"Caballo Court FC", away:"Outcast FC", goals:[], forfeit:"away"}
+  ]},
+  {round:6, day:"Sunday 25 October", matches:[
+    {home:"Ilyes FC", away:"Golden Dawn"},
+    {home:"Haramball", away:"Brazilian Pharaohs"},
+    {home:"Taim FC", away:"Outcast FC"},
+    {home:"Chevapi FC", away:"Caballo Court FC"}
+  ]},
+  {round:7, day:"Sunday 25 October", matches:[
+    {home:"Ilyes FC", away:"Brazilian Pharaohs"},
+    {home:"Golden Dawn", away:"Outcast FC"},
+    {home:"Haramball", away:"Caballo Court FC"},
+    {home:"Taim FC", away:"Chevapi FC"}
   ]}
 ];
 
