@@ -55,11 +55,12 @@ var ROUNDS = [
     {home:"Chevapi FC", away:"Brazilian Pharaohs", goals:[["Chevapi FC","Mujahed",[1]],["Brazilian Pharaohs","Hamza Ahmad",[2,6,14]],["Chevapi FC","Ismail",[5]],["Chevapi FC","Farooq",[13]]]},
     {home:"Caballo Court FC", away:"Outcast FC", goals:[], forfeit:"away"}
   ]},
-  {round:6, day:"Sunday 25 October", matches:[
-    {home:"Ilyes FC", away:"Golden Dawn"},
-    {home:"Haramball", away:"Brazilian Pharaohs"},
-    {home:"Taim FC", away:"Outcast FC"},
-    {home:"Chevapi FC", away:"Caballo Court FC"}
+  // Round 6 goal times weren't kept (tracker reset mid-game), so goals are counts only
+  {round:6, day:"Sunday 25 October", played:true, matches:[
+    {home:"Ilyes FC", away:"Golden Dawn", goals:[["Ilyes FC","Belal Safi",1],["Ilyes FC","Ilyes Nair",1],["Golden Dawn","Murtaza",1],["Golden Dawn","Ali Shahab",2]]},
+    {home:"Haramball", away:"Brazilian Pharaohs", goals:[["Brazilian Pharaohs","Hamza Ahmad",2]]},
+    {home:"Taim FC", away:"Outcast FC", goals:[["Taim FC","Hamzah Alhamad",1],["Taim FC","Ibrahim Taher",2]]},
+    {home:"Chevapi FC", away:"Caballo Court FC", goals:[["Chevapi FC","Adam Altrakrouri",2],["Chevapi FC","Ismail",2],["Chevapi FC","Own goal",1],["Caballo Court FC","Paxton Husted",1],["Caballo Court FC","Mohammad Moktad",1]]}
   ]}
 ];
 
