@@ -170,6 +170,14 @@ if(upcoming.length){
   el("laterBody").innerHTML = '<p class="note">More fixtures coming soon.</p>';
 }
 
+// notices (e.g. a weekend off) sit at the top of Next Matchday
+var notices = typeof NOTICES !== "undefined" ? NOTICES : [];
+if(notices.length){
+  el("next").querySelector(".title").insertAdjacentHTML("afterend", notices.map(function(n){
+    return '<p class="notice">' + esc(n) + '</p>';
+  }).join(""));
+}
+
 // earlier rounds, newest first
 var earlier = played.slice(0, -1).reverse();
 el("earlier").innerHTML = earlier.length ? earlier.map(function(r){

@@ -64,6 +64,10 @@ var ROUNDS = [
   ]}
 ];
 
+/* Announcements shown at the top of Next Matchday, e.g. a weekend with no games.
+   Delete a line once it has passed. */
+var NOTICES = ["No games on Saturday 31 October."];
+
 /* Players listed here come first when several players are level on goals.
    Everyone else is alphabetical. */
 var SCORER_PRIORITY = ["Malik Helwani"];
