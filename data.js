@@ -60,12 +60,6 @@ var ROUNDS = [
     {home:"Haramball", away:"Brazilian Pharaohs"},
     {home:"Taim FC", away:"Outcast FC"},
     {home:"Chevapi FC", away:"Caballo Court FC"}
-  ]},
-  {round:7, day:"Sunday 25 October", matches:[
-    {home:"Ilyes FC", away:"Brazilian Pharaohs"},
-    {home:"Golden Dawn", away:"Outcast FC"},
-    {home:"Haramball", away:"Caballo Court FC"},
-    {home:"Taim FC", away:"Chevapi FC"}
   ]}
 ];
 
